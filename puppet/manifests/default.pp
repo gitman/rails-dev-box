@@ -92,6 +92,18 @@ class { 'install_postgres': }
 
 class { 'memcached': }
 
+# --- Nginx --------------------------------------------------------------------
+
+package { 'nginx':
+  ensure => installed
+}
+
+# --- Redis --------------------------------------------------------------------
+
+package { 'redis-server':
+  ensure => installed
+}
+
 # --- Packages -----------------------------------------------------------------
 
 package { 'curl':
